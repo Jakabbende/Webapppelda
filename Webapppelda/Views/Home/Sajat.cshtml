@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "WRAAAA";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Costumer adatai</p>
+<table class="table">
+    <thead>
+        <th>Id</th>
+        <th>Név</th>
+        <th>Telefon</th>
+        <th>Score</th>
+    </thead>
+@foreach (var cost in Model)
+{
+    <tr>
+       <td><a asp-area="" asp-controller="Home" asp-action="Vasarlo" asp-route-id="@cost.Id"> @cost.Id </a></td>
+       <td>@cost.Name</td>
+       <td>@cost.Phone</td>
+       <td>@cost.Score</td>
+    </tr>      
+}
+</table>
